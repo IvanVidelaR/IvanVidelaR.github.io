@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --neutral: #0f0e17;
+    --neutral-transparency: #202021;
+    --headline: #fffffe;
+    --button: #ff8906;
+    --button-transparency: #ff890699;
+    --text: #a7a9be;
+    --tertiary: #e53170;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+
+}
+
+header {
+    color: var(--headline);
+}
+
+html {
+    font-size: 81.9%;
+    background-color: var(--neutral);
+}
+
+body {
+    color: var(--text);
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    position: fixed;
+    padding: 25px 40px;
+    background-color: var(--neutral-transparency);
+    box-shadow: 0 0 2px rgba(183, 183, 183, 0.711);
+    z-index: 1;
+}
+
+.nav-links {
+    display: flex;
+    font-size: 1.2rem;    
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-links a, #projects .project-tile{
+    color: var(--headline);
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links .nav-link:hover, #projects .project-tile:hover{
+    color: var(--button);
+}
+
+#logo {
+    cursor: pointer;
+}
+
+.nav-links .button {
+    color: var(--neutral-transparency);
+
+}
+
+.button {
+    background-color: var(--button);
+    padding: .5em 1em;
+    border-radius: 50px;
+}
+
+.button:hover {
+    background-color: var(--button-transparency);
+    color: var(--neutral-transparency)
+}
+
+#welcome-section {
+    padding: 235px 0 135px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 4rem;
+    max-width: 61rem;
+}
+
+.welcome-main {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+}
+
+.welcome-main h1{
+    font-size: 3.8rem;
+    line-height: 8rem;
+    color: var(--headline);
+}
+
+.welcome-main p {
+    font-size: 1.1rem;
+    color: var(--button);
+    font-style: italic;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(183,183,183,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(183,183,183,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(183,183,183,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.avatar {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	box-shadow: 0 5px 15px 0px rgba(183,183,183,0.6);
+	transform: translatey(0px);
+    z-index: -1;
+	animation: float 6s ease-in-out infinite;
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+}
+
+.description p {
+    color: var(--button);
+    font-size: .9rem;
+}
+
+.description h3 {
+    font-style: italic;
+    letter-spacing: .2rem;
+    padding-bottom: .8rem;
+    font-size: 1.1rem;
+}
+
+.description p, .description h3{
+    text-align: left;
+    line-height: 2rem;
+}
+
+#projects {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#projects .project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects .project-tile {
+    text-decoration: none;
+}
+
+#projects .project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-transparency);
+    color: var(--headline);
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    gap: .8rem;
+}
+
+.code {
+    color: var(--neutral-transparency);
+    transition: color 0.3s ease-out;
+}
+
+#projects .project-tile:hover .code{
+    color: var(--tertiary);
+}
+
+#projects .project-tile:hover {
+    scale: 1.05;
+}
+
+.container .show-all {
+    display: inline-block;
+    color: var(--neutral-transparency);
+    font-size: 1.3rem;
+    text-decoration: none;
+    width: 180px;
+    margin: 0 auto;
+    transition: all 0.3s ease 0s;
+    
+}
+.container .show-all:hover {
+    scale: 1.06;
+}
+.show-all > i {
+    margin-left: 5px;
+}
+.show-all:hover > i {
+    transform: translateX(2px);
+}
+
+#skills {
+    padding: 100px 0 100px 0;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-logo img{
+    width: 130.5px;
+    height: 130.5px;
+    padding: 0 10px;
+}
+
+.contenedor-logo {
+    padding: 3px;
+}
+
+#contact {
+    padding: 100px 0 200px 0;
+}
+
+.social-medias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+    padding-top: 20px;
+}
+
+.social-medias .social-media > i, .social-medias .social-media .gmail-icon {
+    font-size: 7rem;
+    padding-top: 0;
+}
+
+.social-medias .social-media {
+    text-decoration: none;
+    color: var(--headline);
+    transition: all 0.5s ease 0s;
+}
+
+.social-medias .social-media:hover {
+    scale: 1.2;
+    color: var(--button);
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 25px 40px;
+    background-color: var(--neutral-transparency);
+    box-shadow: 0 0 2px rgba(183, 183, 183, 0.711);
+    z-index: 1;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 70%;
+        background-color: var(--neutral);
+    }
+
+    .avatar {
+        width: 126px;
+        height: 126px;
+    }
+
+    #welcome-section {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .social-medias {
+        gap: 25%;
+    }
+
+    footer {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #navbar, footer{
+        padding: 25px 5px;
+    }
+
+    #navbar #logo {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        font-size: 13px;
+        gap: .5rem
+    }
+
+    .social-medias {
+        gap: 10%;
+    }
+
+}
+@media (max-width: 370px) {
+    #navbar, footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    
+    #navbar #logo {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        font-size: 13px;
+        gap: .5rem
+    }
+
+    .social-medias {
+        flex-wrap: wrap;
+    }
+
+    .welcome-main h1{
+        font-size: 2.8rem;
+    }
+    
+    .welcome-main p {
+        font-size: .8rem;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #welcome-section {
+        padding: 220px 0;
+    }
+}
