@@ -389,9 +389,26 @@ footer {
     footer {
         font-size: 1.1rem;
     }
+
+    .btn-theme {
+        width: 30px;
+        height: 30px;
+    }
+
+    .img-change {
+        width: 15px;
+        margin-top: 2px;
+    }
+
+    .linea-divisoria {
+        display: inline-block;
+        height: 30px;
+        border-left: 2px solid var(--headline);
+        margin-right: 10px;
+    }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 555px) {
     #navbar, footer{
         padding: 25px 5px;
     }
@@ -410,7 +427,8 @@ footer {
     }
 
 }
-@media (max-width: 370px) {
+
+@media (max-width: 415px) {
     #navbar, footer{
         flex-wrap: wrap;
         justify-content: center;
@@ -447,4 +465,22 @@ footer {
     #welcome-section {
         padding: 220px 0;
     }
+}
+
+@media (max-width: 315px) {
+    #navbar, footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #navbar #logo {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        font-size: 11px;
+        gap: .3rem
+    }
+
 }
