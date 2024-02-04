@@ -12,9 +12,13 @@
 </head>
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="navbar" class="dark">
             <h3 id="logo">IvanVidelaR</h3>
             <ul class="nav-links">
+                <button type="button" id="btn-change-mode" class="btn-theme dark-mode">
+                    <img class="img-change" src="media/moon-dark.png" alt="dark-mode">
+                </button>
+                <div class="linea-divisoria"></div>
                 <li><a href="#welcome-section" class="nav-link">Welcome</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -104,7 +108,7 @@
                         <p>Git</p>
                     </div>
                     <div class="contenedor-logo">
-                        <img src="https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFE" />
+                        <img class="github" src="https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFE" />
                         <p>Github</p>
                     </div>
                     <div class="contenedor-logo">
@@ -112,7 +116,7 @@
                         <p>Linux</p>
                     </div>
                     <div class="contenedor-logo">
-                        <img src="https://devicon-website.vercel.app/api/microsoftsqlserver/plain.svg?color=%23FFFFFE" />
+                        <img class="sql-server" src="https://devicon-website.vercel.app/api/microsoftsqlserver/plain.svg?color=%23FFFFFE" />
                         <p>Microsoft SQL Server</p>
                     </div>
                     <div class="contenedor-logo">
@@ -145,7 +149,7 @@
             </div>
         </section>
     </main> 
-    <footer>
+    <footer id="footer" class="dark-footer">
         <p>Created by Iván Agustín Videla Ribodino.</p>
         <p>Copyright © 2023. All rights are reserved.</p>
     </footer>
