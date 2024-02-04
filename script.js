@@ -4,7 +4,9 @@ const imgGithub = document.querySelector(".github");
 const imgSqlServer = document.querySelector(".sql-server");
 const footer = document.getElementById("footer");
 const navbar = document.getElementById("navbar");
-
+const favicon = document.getElementById("favicon");
+const icon = document.getElementById("icon");
+const avatar = document.querySelector(".avatar");
 
 const changeColorMode = () => {
     if(btnChangeColorMode.classList.contains("dark-mode"))
@@ -14,6 +16,10 @@ const changeColorMode = () => {
         imgChangeColorMode.src = "media/sun-dark.png";
         imgGithub.src = "https://devicon-website.vercel.app/api/github/original.svg?color=%23094067";
         imgSqlServer.src = "https://devicon-website.vercel.app/api/microsoftsqlserver/plain.svg?color=%23094067";
+        favicon.href = "media/icon-light.png";
+        icon.src = "media/icon-light.png";
+        avatar.classList.add("animation-light");
+        avatar.classList.remove("animation-dark");
         footer.classList.add("light-footer");
         footer.classList.remove("dark-footer");
         navbar.classList.add("light");
@@ -34,6 +40,10 @@ const changeColorMode = () => {
         imgChangeColorMode.src = "media/moon-dark.png";
         imgGithub.src = "https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFE";
         imgSqlServer.src = "https://devicon-website.vercel.app/api/microsoftsqlserver/plain.svg?color=%23FFFFFE";
+        favicon.href = "media/icon-dark.png";
+        icon.src = "media/icon-dark.png";
+        avatar.classList.add("animation-dark");
+        avatar.classList.remove("animation-light");
         footer.classList.add("dark-footer");
         footer.classList.remove("light-footer");
         navbar.classList.add("dark");
